@@ -606,4 +606,124 @@ footer .brand b{
 
   }
 
+} /* LUXURY DARK FINISH — WHITE AREA FIX */
+
+body,
+
+main {
+
+  background-color: #080a0f;
+
+  color: #eee8dc;
+
+}
+
+/* Main sections */
+
+section,
+
+.booking-section,
+
+.destinations-section,
+
+.why-section,
+
+.contact-section {
+
+  color: #eee8dc;
+
+}
+
+/* Cards and content panels */
+
+.card,
+
+.destination-card,
+
+.flight-card,
+
+.iq-fares,
+
+.fare-card,
+
+.booking-form,
+
+.contact-card {
+
+  background-color: #11151b;
+
+  color: #eee8dc;
+
+  border-color: rgba(200, 169, 107, 0.25);
+
+}
+
+/* Headings */
+
+h1,
+
+h2,
+
+h3,
+
+h4 {
+
+  color: #d6b777;
+
+}
+
+/* Text fields */
+
+input,
+
+select,
+
+textarea {
+
+  background-color: #171b22;
+
+  color: #f5f0e7;
+
+  border: 1px solid #51452f;
+
+}
+
+input::placeholder,
+
+textarea::placeholder {
+
+  color: #a6a7aa;
+
+}
+
+/* Buttons */
+
+button,
+
+.btn {
+
+  border-color: #c8a96b;
+
+}
+
+/* Footer */
+
+footer {
+
+  background-color: #06080c;
+
+  color: #eee8dc;
+
+}
+
+/* Mobile consistency */
+
+@media (max-width: 768px) {
+
+  body {
+
+    background-color: #080a0f;
+
+  }
+
 }
