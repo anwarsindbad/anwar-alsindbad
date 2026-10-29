@@ -1,121 +1,13 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="أنوار السندباد للسفر والسياحة - احجز رحلتك القادمة من البصرة">
-  <title>أنوار السندباد | Anwar Al-Sindbad Travel & Tourism</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="Anwar Al-Sindbad home">
-      <div class="brand-mark">✈</div>
-      <div>
-        <strong data-ar="أنوار السندباد" data-en="ANWAR AL-SINDBAD">أنوار السندباد</strong>
-        <small data-ar="للسفر والسياحة" data-en="TRAVEL & TOURISM">للسفر والسياحة</small>
-      </div>
-    </a>
-    <nav>
-      <a href="#flights" data-ar="حجز الطيران" data-en="Flights">حجز الطيران</a>
-      <a href="#offers" data-ar="عروضنا" data-en="Offers">عروضنا</a>
-      <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
-    </nav>
-    <button id="languageToggle" class="lang-btn" type="button" aria-label="Change language">English</button>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-shade"></div>
-      <div class="hero-content">
-        <span class="eyebrow" data-ar="من البصرة إلى العالم" data-en="FROM BASRA TO THE WORLD">من البصرة إلى العالم</span>
-        <h1 data-ar="رحلتك تبدأ من هنا" data-en="Your Journey Starts Here">رحلتك تبدأ من هنا</h1>
-        <p data-ar="نساعدك تختار رحلتك القادمة بكل سهولة، وخلي تفاصيل الحجز علينا." data-en="Find your next trip with ease. Let our travel team help with the details.">نساعدك تختار رحلتك القادمة بكل سهولة، وخلي تفاصيل الحجز علينا.</p>
-        <a class="button primary" href="#flights" data-ar="ابحث عن رحلة" data-en="Find a Flight">ابحث عن رحلة</a>
-      </div>
-      <div class="hero-stats">
-        <div><b>✈</b><span data-ar="حجوزات طيران" data-en="Flight bookings">حجوزات طيران</span></div>
-        <div><b>🌍</b><span data-ar="وجهات سياحية" data-en="Holiday destinations">وجهات سياحية</span></div>
-        <div><b>💬</b><span data-ar="متابعة مباشرة" data-en="Personal assistance">متابعة مباشرة</span></div>
-      </div>
-    </section>
-
-    <section class="booking-section section" id="flights">
-      <div class="section-heading">
-        <span class="eyebrow" data-ar="خطوتك الأولى" data-en="START YOUR TRIP">خطوتك الأولى</span>
-        <h2 data-ar="اطلب رحلة الطيران" data-en="Request a Flight">اطلب رحلة الطيران</h2>
-        <p data-ar="حالياً، أرسل تفاصيل رحلتك لموظفينا عبر واتساب حتى نراجع الخيارات والأسعار المتاحة." data-en="For now, send your trip details to our team on WhatsApp so we can check available options and prices.">حالياً، أرسل تفاصيل رحلتك لموظفينا عبر واتساب حتى نراجع الخيارات والأسعار المتاحة.</p>
-      </div>
-      <form id="flightForm" class="booking-card">
-        <div class="field">
-          <label for="from" data-ar="مدينة المغادرة" data-en="From">مدينة المغادرة</label>
-          <input id="from" name="from" required placeholder="البصرة / Basra">
-        </div>
-        <div class="field">
-          <label for="to" data-ar="الوجهة" data-en="Destination">الوجهة</label>
-          <input id="to" name="to" required placeholder="إسطنبول / Istanbul">
-        </div>
-        <div class="field">
-          <label for="depart" data-ar="تاريخ الذهاب" data-en="Departure date">تاريخ الذهاب</label>
-          <input id="depart" name="depart" type="date" required>
-        </div>
-        <div class="field">
-          <label for="return" data-ar="تاريخ العودة (اختياري)" data-en="Return date (optional)">تاريخ العودة (اختياري)</label>
-          <input id="return" name="return" type="date">
-        </div>
-        <div class="field">
-          <label for="passengers" data-ar="عدد المسافرين" data-en="Passengers">عدد المسافرين</label>
-          <select id="passengers" name="passengers">
-            <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option>
-            <option value="4">4</option><option value="5">5</option><option value="6+">6+</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="tripType" data-ar="نوع الرحلة" data-en="Trip type">نوع الرحلة</label>
-          <select id="tripType" name="tripType">
-            <option value="ذهاب وعودة" data-ar="ذهاب وعودة" data-en="Round trip">ذهاب وعودة</option>
-            <option value="ذهاب فقط" data-ar="ذهاب فقط" data-en="One way">ذهاب فقط</option>
-          </select>
-        </div>
-        <button class="button primary submit-btn" type="submit" data-ar="إرسال الطلب عبر واتساب" data-en="Send request on WhatsApp">إرسال الطلب عبر واتساب</button>
-        <p class="form-note" data-ar="هذا نموذج طلب وليس تأكيداً للحجز أو سعراً نهائياً. يتم تأكيد التفاصيل من قبل موظف الشركة." data-en="This is a request, not a confirmed booking or final fare. Our team will confirm the details.">هذا نموذج طلب وليس تأكيداً للحجز أو سعراً نهائياً. يتم تأكيد التفاصيل من قبل موظف الشركة.</p>
-      </form>
-    </section>
-
-    <section class="section offers" id="offers">
-      <div class="section-heading">
-        <span class="eyebrow" data-ar="اكتشف العالم" data-en="DISCOVER THE WORLD">اكتشف العالم</span>
-        <h2 data-ar="وجهات تستحق الزيارة" data-en="Destinations Worth Visiting">وجهات تستحق الزيارة</h2>
-        <p data-ar="تابع عروضنا الموسمية واسأل فريقنا عن المواعيد والأسعار الحالية." data-en="Explore seasonal offers and ask our team about current dates and prices.">تابع عروضنا الموسمية واسأل فريقنا عن المواعيد والأسعار الحالية.</p>
-      </div>
-      <div class="destination-grid">
-        <article class="destination card-istanbul"><span>01</span><div><h3 data-ar="إسطنبول" data-en="Istanbul">إسطنبول</h3><p data-ar="تاريخ، تسوق، وإطلالات ساحرة" data-en="History, shopping and stunning views">تاريخ، تسوق، وإطلالات ساحرة</p></div></article>
-        <article class="destination card-azerbaijan"><span>02</span><div><h3 data-ar="أذربيجان" data-en="Azerbaijan">أذربيجان</h3><p data-ar="طبيعة وتجارب مختلفة" data-en="Nature and unique experiences">طبيعة وتجارب مختلفة</p></div></article>
-        <article class="destination card-thailand"><span>03</span><div><h3 data-ar="تايلند" data-en="Thailand">تايلند</h3><p data-ar="بانكوك، بوكيت، وباتايا" data-en="Bangkok, Phuket and Pattaya">بانكوك، بوكيت، وباتايا</p></div></article>
-        <article class="destination card-salalah"><span>04</span><div><h3 data-ar="صلالة" data-en="Salalah">صلالة</h3><p data-ar="خضرة وأجواء استثنائية" data-en="Green landscapes and refreshing escapes">خضرة وأجواء استثنائية</p></div></article>
-      </div>
-      <div class="center"><a class="button outline" href="https://wa.me/9647717199399" target="_blank" rel="noopener" data-ar="اسأل عن العروض الحالية" data-en="Ask about current offers">اسأل عن العروض الحالية</a></div>
-    </section>
-
-    <section class="contact-band" id="contact">
-      <div>
-        <span class="eyebrow" data-ar="نحن بخدمتك" data-en="HERE TO HELP">نحن بخدمتك</span>
-        <h2 data-ar="خلّينا نرتب رحلتك القادمة" data-en="Let’s Plan Your Next Trip">خلّينا نرتب رحلتك القادمة</h2>
-        <p data-ar="تواصل ويانا للاستفسار عن الرحلات والحجوزات والعروض السياحية." data-en="Contact us about flights, bookings and holiday packages.">تواصل ويانا للاستفسار عن الرحلات والحجوزات والعروض السياحية.</p>
-      </div>
-      <div class="contact-actions">
-        <a class="button light" href="https://wa.me/9647717199399" target="_blank" rel="noopener">WhatsApp 0771 719 9399</a>
-        <a class="button ghost-light" href="https://wa.me/9647819902200" target="_blank" rel="noopener">WhatsApp 0781 990 2200</a>
-        <a class="social-link" href="https://www.instagram.com/Anwar_alsindbad/" target="_blank" rel="noopener">Instagram @Anwar_alsindbad ↗</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="brand footer-brand"><div class="brand-mark">✈</div><div><strong data-ar="أنوار السندباد" data-en="ANWAR AL-SINDBAD">أنوار السندباد</strong><small data-ar="للسفر والسياحة" data-en="TRAVEL & TOURISM">للسفر والسياحة</small></div></div>
-    <p data-ar="البصرة – العباسية – قرب جامع السيد حامد السويج" data-en="Basra – Al-Abbasiya – near Sayyid Hamed Al-Suwaij Mosque">البصرة – العباسية – قرب جامع السيد حامد السويج</p>
-    <small>© <span id="year"></span> Anwar Al-Sindbad Travel & Tourism</small>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081b2b"><title>أنوار السندباد | Anwar Al-Sindbad</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<div class="announce"><span data-ar="رحلتك القادمة أقرب مما تتصور" data-en="Your next journey is closer than you think">رحلتك القادمة أقرب مما تتصور</span> ✦ <span data-ar="احجز بثقة مع أنوار السندباد" data-en="Travel confidently with Anwar Al-Sindbad">احجز بثقة مع أنوار السندباد</span></div>
+<header><a class="brand" href="#home"><div class="mark">AS<sup>✦</sup></div><div><b data-ar="أنوار السندباد" data-en="ANWAR AL-SINDBAD">أنوار السندباد</b><small data-ar="للسفر والسياحة" data-en="TRAVEL & TOURISM">للسفر والسياحة</small></div></a><nav><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a><a href="#flights" data-ar="حجز الطيران" data-en="Flights">حجز الطيران</a><a href="#offers" data-ar="الوجهات والعروض" data-en="Destinations">الوجهات والعروض</a><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></nav><div class="actions"><button id="lang">English</button><a class="mini" href="#flights" data-ar="خطط لرحلتك ↗" data-en="Plan your trip ↗">خطط لرحلتك ↗</a></div></header>
+<main><section class="hero" id="home"><div class="hero-bg"></div><div class="hero-shade"></div><div class="hero-copy"><label>✦ <span data-ar="من البصرة إلى العالم" data-en="FROM BASRA TO THE WORLD">من البصرة إلى العالم</span></label><h1 data-ar="العالم أوسع،<br><em>خلّ رحلتك تبدأ.</em>" data-en="The world is wide.<br><em>Let your journey begin.</em>">العالم أوسع،<br><em>خلّ رحلتك تبدأ.</em></h1><p data-ar="تجارب سفر مختارة، طلبات حجز طيران، وعروض سياحية نرتب تفاصيلها وياك من أول خطوة." data-en="Curated travel experiences, flight requests and holiday offers—with a team ready to help from the first step.">تجارب سفر مختارة، طلبات حجز طيران، وعروض سياحية نرتب تفاصيلها وياك من أول خطوة.</p><div class="hero-buttons"><a class="btn gold" href="#flights" data-ar="ابدأ حجزك" data-en="Start your booking">ابدأ حجزك</a><a class="plain" href="#offers" data-ar="اكتشف الوجهات ←" data-en="Explore destinations →">اكتشف الوجهات ←</a></div><small class="trust">✦ <span data-ar="متابعة شخصية من فريق أنوار السندباد" data-en="Personal support from our team">متابعة شخصية من فريق أنوار السندباد</span></small></div><div class="hero-foot"><span>✈ <span data-ar="طلبات حجز الطيران" data-en="Flight requests">طلبات حجز الطيران</span></span><span>◎ <span data-ar="عروض سياحية متنوعة" data-en="Holiday offers">عروض سياحية متنوعة</span></span><span>◷ <span data-ar="متابعة عبر واتساب" data-en="WhatsApp support">متابعة عبر واتساب</span></span></div></section>
+<section class="booking section" id="flights"><div class="heading"><label data-ar="خطوتك الأولى" data-en="YOUR FIRST STEP">خطوتك الأولى</label><h2 data-ar="إلى أين تأخذك الرحلة؟" data-en="Where will your journey take you?">إلى أين تأخذك الرحلة؟</h2><p data-ar="أرسل تفاصيل رحلتك وفريقنا يساعدك بمراجعة الخيارات والأسعار المتاحة." data-en="Send your trip details and our team will check available options and fares.">أرسل تفاصيل رحلتك وفريقنا يساعدك بمراجعة الخيارات والأسعار المتاحة.</p></div><form id="flightForm" class="form"><div><label for="from" data-ar="من — مدينة المغادرة" data-en="From — departure city">من — مدينة المغادرة</label><input id="from" required placeholder="البصرة / Basra"></div><div><label for="to" data-ar="إلى — الوجهة" data-en="To — destination">إلى — الوجهة</label><input id="to" required placeholder="إسطنبول / Istanbul"></div><div><label for="depart" data-ar="تاريخ الذهاب" data-en="Departure date">تاريخ الذهاب</label><input id="depart" type="date" required></div><div><label for="return" data-ar="تاريخ العودة (اختياري)" data-en="Return date (optional)">تاريخ العودة (اختياري)</label><input id="return" type="date"></div><div><label for="passengers" data-ar="عدد المسافرين" data-en="Passengers">عدد المسافرين</label><select id="passengers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div><div><label for="tripType" data-ar="نوع الرحلة" data-en="Trip type">نوع الرحلة</label><select id="tripType"><option value="round" data-ar="ذهاب وعودة" data-en="Round trip">ذهاب وعودة</option><option value="oneway" data-ar="ذهاب فقط" data-en="One way">ذهاب فقط</option></select></div><button class="btn gold send" type="submit"><span data-ar="أرسل طلب الرحلة عبر واتساب ↗" data-en="Send flight request via WhatsApp ↗">أرسل طلب الرحلة عبر واتساب ↗</span></button><small class="note" data-ar="هذا طلب استفسار وليس حجزاً مؤكداً. السعر والتوفر يؤكدهما موظف الشركة." data-en="This is an enquiry, not a confirmed booking. Fare and availability are confirmed by our team.">هذا طلب استفسار وليس حجزاً مؤكداً. السعر والتوفر يؤكدهما موظف الشركة.</small></form></section>
+<section class="section destinations" id="offers"><div class="split"><div class="heading left"><label data-ar="اختر وجهتك" data-en="CHOOSE YOUR DESTINATION">اختر وجهتك</label><h2 data-ar="أماكن تبقى بالذاكرة" data-en="Places that stay with you">أماكن تبقى بالذاكرة</h2></div><p data-ar="من المدن النابضة بالحياة إلى الطبيعة الهادئة، خلّينا نساعدك تختار الرحلة المناسبة." data-en="From vibrant cities to peaceful escapes, let us help you find your next trip.">من المدن النابضة بالحياة إلى الطبيعة الهادئة، خلّينا نساعدك تختار الرحلة المناسبة.</p></div><div class="grid">
+<article class="place istanbul"><span>01 / CITY ESCAPE</span><div><small data-ar="مدينة تجمع القارتين" data-en="A city between two continents">مدينة تجمع القارتين</small><h3 data-ar="إسطنبول" data-en="Istanbul">إسطنبول</h3><a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A5%D8%B3%D8%B7%D9%86%D8%A8%D9%88%D9%84" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗" data-en="Ask about offers ↗">استفسر عن العروض ↗</a></div></article>
+<article class="place azer"><span>02 / NATURE</span><div><small data-ar="طبيعة وتجارب مختلفة" data-en="Nature and new experiences">طبيعة وتجارب مختلفة</small><h3 data-ar="أذربيجان" data-en="Azerbaijan">أذربيجان</h3><a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A3%D8%B0%D8%B1%D8%A8%D9%8A%D8%AC%D8%A7%D9%86" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗" data-en="Ask about offers ↗">استفسر عن العروض ↗</a></div></article>
+<article class="place thai"><span>03 / TROPICAL</span><div><small data-ar="استوائي ومليء بالحياة" data-en="Tropical and full of life">استوائي ومليء بالحياة</small><h3 data-ar="تايلند" data-en="Thailand">تايلند</h3><a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%AA%D8%A7%D9%8A%D9%84%D9%86%D8%AF" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗" data-en="Ask about offers ↗">استفسر عن العروض ↗</a></div></article>
+<article class="place salalah"><span>04 / GREEN ESCAPE</span><div><small data-ar="خضرة وهدوء" data-en="Green landscapes and calm">خضرة وهدوء</small><h3 data-ar="صلالة" data-en="Salalah">صلالة</h3><a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%B5%D9%84%D8%A7%D9%84%D8%A9" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗" data-en="Ask about offers ↗">استفسر عن العروض ↗</a></div></article></div><div class="offer-note"><b>✦</b><div><strong data-ar="عروضنا تتجدد حسب مواعيد السفر والتوفر" data-en="Our offers change with travel dates and availability">عروضنا تتجدد حسب مواعيد السفر والتوفر</strong><p data-ar="تواصل ويانا حتى نرسل لك أحدث الباقات والأسعار المؤكدة." data-en="Contact us for the latest packages and confirmed prices.">تواصل ويانا حتى نرسل لك أحدث الباقات والأسعار المؤكدة.</p></div><a class="btn dark" href="https://wa.me/9647717199399" target="_blank" rel="noopener" data-ar="اطلب أحدث العروض ↗" data-en="Get latest offers ↗">اطلب أحدث العروض ↗</a></div></section>
+<section class="why section"><div><label data-ar="رفيق رحلتك" data-en="YOUR TRAVEL PARTNER">رفيق رحلتك</label><h2 data-ar="أنت اختار الوجهة،<br><em>وإحنا نهتم بالتفاصيل.</em>" data-en="You choose the destination.<br><em>We’ll help with the details.</em>">أنت اختار الوجهة،<br><em>وإحنا نهتم بالتفاصيل.</em></h2><p data-ar="نساعدك بالاستفسار عن خيارات الطيران والعروض السياحية، ونوضح التفاصيل قبل تأكيد الحجز." data-en="We help you explore flight options and holiday offers, with details explained before you confirm.">نساعدك بالاستفسار عن خيارات الطيران والعروض السياحية، ونوضح التفاصيل قبل تأكيد الحجز.</p><a class="btn gold" href="#contact" data-ar="تواصل ويانا" data-en="Talk to our team">تواصل ويانا</a></div><div class="compass"><div class="ring"></div><b>✦</b><strong>AS</strong><small data-ar="رحلتك، بطريقتك" data-en="YOUR TRIP, YOUR WAY">رحلتك، بطريقتك</small></div></section>
+<section class="contact" id="contact"><div><label data-ar="نحن قريبون منك" data-en="WE’RE HERE FOR YOU">نحن قريبون منك</label><h2 data-ar="خلّينا نخطط لرحلتك القادمة." data-en="Let’s plan your next journey.">خلّينا نخطط لرحلتك القادمة.</h2><p data-ar="للحجز والاستفسار عن الرحلات والعروض، تواصل مباشرة ويانا." data-en="For bookings, flights and holiday offers, get in touch with our team.">للحجز والاستفسار عن الرحلات والعروض، تواصل مباشرة ويانا.</p></div><div class="contact-buttons"><a class="btn gold" href="https://wa.me/9647717199399" target="_blank" rel="noopener">WhatsApp · 0771 719 9399 ↗</a><a class="btn outline" href="https://wa.me/9647819902200" target="_blank" rel="noopener">WhatsApp · 0781 990 2200 ↗</a><a class="insta" href="https://www.instagram.com/Anwar_alsindbad/" target="_blank" rel="noopener">Instagram @Anwar_alsindbad ↗</a></div></section></main>
+<footer><a class="brand" href="#home"><div class="mark">AS<sup>✦</sup></div><div><b data-ar="أنوار السندباد" data-en="ANWAR AL-SINDBAD">أنوار السندباد</b><small data-ar="للسفر والسياحة" data-en="TRAVEL & TOURISM">للسفر والسياحة</small></div></a><span data-ar="البصرة – العباسية – قرب جامع السيد حامد السويج" data-en="Basra – Al-Abbasiya – near Sayyid Hamed Al-Suwaij Mosque">البصرة – العباسية – قرب جامع السيد حامد السويج</span><small>© <span id="year"></span> Anwar Al-Sindbad Travel & Tourism</small></footer><script src="script.js"></script></body></html>

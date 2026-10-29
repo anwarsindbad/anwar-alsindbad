@@ -1,26 +1,12 @@
-ANWAR AL-SINDBAD TRAVEL & TOURISM — STARTER WEBSITE
+PREMIUM WEBSITE UPDATE — ANWAR AL-SINDBAD
 
-Included:
-- Bilingual Arabic/English responsive landing page
-- Flight request form that sends the details to WhatsApp
-- Destination cards and agency contact details
+Upload and replace index.html, style.css, and script.js in the ROOT of the existing GitHub repository. Commit changes; GitHub Pages will redeploy automatically.
+
+Includes premium navy/gold design, responsive mobile/desktop layout, Arabic/English toggle, destination photo cards, flight enquiry form to WhatsApp, and contact links.
 
 Important:
-- This is a free starter website, not a live airline reservation engine.
-- It does not search real-time fares, take payments, or issue tickets.
-- Live booking requires an approved provider/API, production credentials, and commercial arrangements.
-- Replace the text logo with your official logo image when available.
-- Review the business address, phone numbers, Instagram handle, and all copy before publishing.
-
-Files:
-- index.html
-- style.css
-- script.js
-
-Free hosting option:
-1. Create a GitHub account.
-2. Create a public repository named anwar-alsindbad-site.
-3. Upload these three files to the repository root.
-4. Open Settings > Pages and choose Deploy from a branch, branch main, folder /(root).
-5. Save and wait for the published GitHub Pages address.
-A custom domain can be added later, but buying a domain normally costs money.
+- The AS mark is a temporary monogram; replace with the official Sinbad logo when available.
+- Images are loaded from Unsplash and require internet access.
+- Destination cards currently link to WhatsApp for enquiries; they are not dated live offers.
+- No live fare search, online payment, or automatic ticket issuance is included.
+- Travelport integration requires authorized API/production access and commercial arrangements. Never publish passwords, API secrets, or ticketing credentials in public website files.
