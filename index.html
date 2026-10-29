@@ -8,173 +8,101 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="theme-color" content="#064b38">
+<meta name="theme-color" content="#081b2b">
 
-<title>أسعار تذاكر الخطوط العراقية | أنوار السندباد</title>
+<title>أنوار السندباد | Anwar Al-Sindbad</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 
 <style>
 
-:root{--g:#064b38;--g2:#0b6b4c;--gold:#d8b35d;--ink:#17251f;--muted:#66736d;--bg:#f4f7f4;--line:#e2e9e4}
+/* قسم أسعار الخطوط العراقية - إضافة مستقلة تحافظ على تصميم الموقع */
 
-*{box-sizing:border-box}
+.iq-fares{padding:70px 5%;background:#f4f5f3;color:#081b2b}
 
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+.iq-fares *{box-sizing:border-box}
 
-a{color:inherit}
+.iq-fares .fare-heading{text-align:center;max-width:750px;margin:0 auto 30px}
 
-.wrap{width:min(1100px,93%);margin:auto}
+.iq-fares .fare-heading label{color:#a17a32;font-weight:800;letter-spacing:1px}
 
-.top{background:#032d22;color:#fff;text-align:center;padding:8px;font-size:13px}
+.iq-fares .fare-heading h2{font-size:clamp(27px,4vw,40px);margin:10px 0;color:#081b2b}
 
-.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 0}
+.iq-fares .fare-heading p{color:#66717a;line-height:1.9}
 
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--g);font-size:18px}
+.iq-fares .fare-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;background:white;padding:20px;border:1px solid #e2e5e3;border-radius:16px;margin-bottom:25px}
 
-.brand small{display:block;font-size:11px;color:var(--muted)}
+.iq-fares .fare-field label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}
 
-.logo{width:50px;height:50px;object-fit:contain;background:white;border-radius:12px}
+.iq-fares .fare-field select,.iq-fares .fare-field input{width:100%;min-height:45px;padding:10px;border:1px solid #d9dfdd;border-radius:8px;background:white;font:inherit;font-size:14px;color:#081b2b}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border:0;border-radius:11px;text-decoration:none;font-weight:800;cursor:pointer;font:inherit}
+.iq-fares .fare-filter-buttons{display:flex;gap:8px;align-items:end}
 
-.green{background:var(--g);color:white}
+.iq-fares .fare-btn{border:0;border-radius:8px;padding:11px 14px;font:inherit;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 
-.gold{background:var(--gold);color:#1d2a20}
+.iq-fares .fare-btn-gold{background:#d7b46a;color:#081b2b}
 
-.hero{background:linear-gradient(125deg,#063b2d,#0c6c4c);color:white;border-radius:23px;padding:clamp(24px,5vw,48px);position:relative;overflow:hidden}
+.iq-fares .fare-btn-dark{background:#081b2b;color:white}
 
-.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.25;margin:8px 0 12px}
+.iq-fares .fare-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 
-.hero p{color:#e1eee8;max-width:700px}
+.iq-fares .fare-card{background:white;border:1px solid #e0e4e1;border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px #081b2b0b}
 
-.eyebrow{color:#f2d58c;font-size:13px;font-weight:800}
+.iq-fares .fare-card-top{background:#0b2638;color:white;padding:20px}
 
-.actions{display:flex;flex-wrap:wrap;gap:10px}
+.iq-fares .fare-card-top small{color:#d7b46a;font-weight:800}
 
-.hero .green{background:#fff;color:var(--g)}
+.iq-fares .fare-card-top h3{font-size:22px;margin:6px 0}
 
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 32px}
+.iq-fares .fare-card-top p{margin:0;color:#d4dfe6;font-size:13px}
 
-.stat,.card,.search{background:white;border:1px solid var(--line);border-radius:16px}
+.iq-fares .fare-card-body{padding:14px 18px;flex:1}
 
-.stat{text-align:center;padding:13px 5px}
+.iq-fares .fare-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #edf0ee}
 
-.stat b{display:block;color:var(--g)}
+.iq-fares .fare-row:last-child{border-bottom:0}
 
-.stat span{font-size:12px;color:var(--muted)}
+.iq-fares .fare-row strong{font-size:13px}
 
-section{margin:30px 0}
+.iq-fares .fare-row small{display:block;color:#7a858a;font-size:11px;margin-top:3px}
 
-.head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:14px}
+.iq-fares .fare-price{font-size:15px;font-weight:900;color:#95702b;white-space:nowrap}
 
-.head h2{margin:0;color:var(--g);font-size:27px}
+.iq-fares .fare-card-foot{padding:0 18px 18px}
 
-.head p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.iq-fares .fare-card-foot button{width:100%}
 
-.updated{font-size:12px;color:var(--muted)}
+.iq-fares .fare-days{padding:12px 18px;background:#f7f7f3;color:#606c70;font-size:12px;line-height:1.8}
 
-.search{padding:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;box-shadow:0 8px 26px #0432240b}
+.iq-fares .fare-note{margin-top:22px;padding:17px;background:#fff8e9;border:1px solid #ead8ab;border-radius:12px;color:#685326;font-size:13px;line-height:1.9}
 
-.field label{display:block;font-size:13px;font-weight:800;margin-bottom:5px}
+.iq-fares .fare-empty{display:none;text-align:center;background:white;padding:25px;border-radius:12px;color:#66717a}
 
-.field select,.field input{width:100%;min-height:46px;padding:10px;border:1px solid #d5e0d8;border-radius:10px;background:#fff;font:inherit;font-size:14px}
+.iq-fares .fare-card[hidden],.iq-fares .fare-row[hidden]{display:none!important}
 
-.field button{width:100%;min-height:46px}
+@media(max-width:850px){
 
-.hint{font-size:12px;color:var(--muted);margin:10px 2px 16px}
+.iq-fares .fare-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-
-.card{overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 20px #04322409}
-
-.cardtop{padding:16px;background:linear-gradient(130deg,#e7f1e9,#f8f5e9)}
-
-.code{font-size:12px;color:var(--muted);font-weight:700}
-
-.card h3{margin:2px 0;color:var(--g);font-size:20px}
-
-.cardtop p{margin:0;color:var(--muted);font-size:12px}
-
-.fares{padding:12px 15px;flex:1}
-
-.fare{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #edf1ee;padding:9px 0}
-
-.fare:last-child{border-bottom:0}
-
-.fare b{font-size:13px}
-
-.fare small{display:block;color:var(--muted);font-size:11px}
-
-.price{color:var(--g);font-size:16px;font-weight:900;white-space:nowrap}
-
-.days{padding:11px 15px;background:#f7faf7;border-top:1px solid var(--line);font-size:12px;color:#4b5d53}
-
-.days strong{color:var(--g)}
-
-.cardaction{padding:0 15px 15px}
-
-.cardaction button{width:100%;font-size:13px}
-
-.empty{display:none;background:white;padding:20px;border-radius:14px;text-align:center;color:var(--muted)}
-
-.notice{background:#fff8e6;border:1px solid #f0dfae;border-radius:14px;padding:15px;font-size:13px;color:#67531e}
-
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-
-.step{background:#fff;border:1px solid var(--line);padding:15px;border-radius:14px}
-
-.step b{color:var(--g);display:block}
-
-.step span{color:var(--muted);font-size:13px}
-
-.contact{background:#e8f1e9;border-radius:18px;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:15px}
-
-.contact h2{margin:0;color:var(--g)}
-
-.contact p{margin:5px 0;color:var(--muted);font-size:13px}
-
-.contact-actions{display:flex;flex-wrap:wrap;gap:8px}
-
-.footer{margin-top:35px;background:#052f24;color:#eaf2ed;padding:25px 0}
-
-.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-.footer small{color:#b7c9bf}
-
-.footer a{color:#fff}
-
-.float{position:fixed;left:14px;bottom:14px;background:#16864b;color:#fff;border-radius:50px;padding:12px 16px;text-decoration:none;font-weight:900;box-shadow:0 7px 22px #0003}
-
-.hide{display:none!important}
-
-@media(max-width:800px){
-
-.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-
-.search{grid-template-columns:repeat(2,minmax(0,1fr))}
+.iq-fares .fare-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
 
 }
 
 @media(max-width:550px){
 
-.grid,.steps{grid-template-columns:1fr}
+.iq-fares{padding:48px 5%}
 
-.head{align-items:start;flex-direction:column}
+.iq-fares .fare-grid{grid-template-columns:1fr}
 
-.contact{align-items:start;flex-direction:column}
+.iq-fares .fare-filters{grid-template-columns:1fr}
 
-.brand{font-size:16px}
+.iq-fares .fare-card-top h3{font-size:20px}
 
-.logo{width:43px;height:43px}
-
-.nav .btn{font-size:12px;padding:9px}
-
-.stats{gap:6px}
-
-.stat{padding:10px 3px}
-
-.stat b{font-size:14px}
-
-.stat span{font-size:10px}
+.iq-fares .fare-price{font-size:14px}
 
 }
 
@@ -184,143 +112,245 @@ section{margin:30px 0}
 
 <body>
 
-<div class="top">أنوار السندباد للسياحة والسفر • البصرة</div>
+<div class="announce">
 
-<div class="wrap">
+<span data-ar="رحلتك القادمة أقرب مما تتصور" data-en="Your next journey is closer than you think">رحلتك القادمة أقرب مما تتصور</span>
 
-<header class="nav">
+✦
 
-<a class="brand" href="#">
+<span data-ar="احجز بثقة مع أنوار السندباد" data-en="Travel confidently with Anwar Al-Sindbad">احجز بثقة مع أنوار السندباد</span>
 
-<img class="logo" src="logo-anwar-alsindbad.jpg" alt="شعار أنوار السندباد" onerror="this.style.display='none'">
+</div>
 
-<span>أنوار السندباد<small>Anwar Al-Sindbad Travel & Tourism</small></span>
+<header>
+
+<a class="brand" href="#home">
+
+<img class="brand-logo" src="logo-anwar-alsindbad.jpg" alt="شعار أنوار السندباد للسفر والسياحة">
+
+<div>
+
+<b data-ar="أنوار السندباد" data-en="ANWAR AL-SINDBAD">أنوار السندباد</b>
+
+<small data-ar="للسفر والسياحة" data-en="TRAVEL & TOURISM">للسفر والسياحة</small>
+
+</div>
 
 </a>
 
-<a class="btn green" href="https://wa.me/9647717199399" target="_blank" rel="noopener">تواصل ويانا</a>
+<nav>
+
+<a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+
+<a href="#flights" data-ar="حجز الطيران" data-en="Flights">حجز الطيران</a>
+
+<a href="#iraqi-fares" data-ar="أسعار العراقية" data-en="Iraqi Airways Prices">أسعار العراقية</a>
+
+<a href="#offers" data-ar="الوجهات والعروض" data-en="Destinations">الوجهات والعروض</a>
+
+<a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+
+</nav>
+
+<div class="actions">
+
+<button id="lang">English</button>
+
+<a class="mini" href="#flights" data-ar="خطط لرحلتك ↗️" data-en="Plan your trip ↗️">خطط لرحلتك ↗️</a>
+
+</div>
 
 </header>
 
 <main>
 
-<section class="hero">
+<!-- الواجهة الأصلية -->
 
-<div class="eyebrow">IRAQI AIRWAYS • DEPARTING FROM BASRA</div>
+<section class="hero" id="home">
 
-<h1>أسعار تذاكر الخطوط الجوية العراقية من البصرة</h1>
+<div class="hero-bg"></div>
 
-<p>اختار وجهتك ونوع الرحلة وشوف أسعار البداية لفئات Economy Silver وGold وPlatinum. نأكد السعر والتوفر قبل إصدار التذكرة.</p>
+<div class="hero-shade"></div>
 
-<div class="actions">
+<div class="hero-copy">
 
-<a class="btn green" href="#prices">شوف الأسعار ↓</a>
+<label>✦ <span data-ar="من البصرة إلى العالم" data-en="FROM BASRA TO THE WORLD">من البصرة إلى العالم</span></label>
 
-<a class="btn gold" href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%AA%D8%B0%D8%A7%D9%83%D8%B1%20%D8%A7%D9%84%D8%AE%D8%B7%D9%88%D8%B7%20%D8%A7%D9%84%D8%AC%D9%88%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82%D9%8A%D8%A9" target="_blank" rel="noopener">استفسر عن تذكرتك</a>
+<h1 data-ar="العالم أوسع،<br><em>خلّ رحلتك تبدأ.</em>" data-en="The world is wide.<br><em>Let your journey begin.</em>">العالم أوسع،<br><em>خلّ رحلتك تبدأ.</em></h1>
+
+<p data-ar="تجارب سفر مختارة، طلبات حجز طيران، وعروض سياحية نرتب تفاصيلها وياك من أول خطوة." data-en="Curated travel experiences, flight requests and holiday offers—with a team ready to help from the first step.">تجارب سفر مختارة، طلبات حجز طيران، وعروض سياحية نرتب تفاصيلها وياك من أول خطوة.</p>
+
+<div class="hero-buttons">
+
+<a class="btn gold" href="#flights" data-ar="ابدأ حجزك" data-en="Start your booking">ابدأ حجزك</a>
+
+<a class="plain" href="#offers" data-ar="اكتشف الوجهات ←" data-en="Explore destinations →">اكتشف الوجهات ←</a>
+
+</div>
+
+<small class="trust">✦ <span data-ar="متابعة شخصية من فريق أنوار السندباد" data-en="Personal support from our team">متابعة شخصية من فريق أنوار السندباد</span></small>
+
+</div>
+
+<div class="hero-foot">
+
+<span>✈️ <span data-ar="طلبات حجز الطيران" data-en="Flight requests">طلبات حجز الطيران</span></span>
+
+<span>◎ <span data-ar="عروض سياحية متنوعة" data-en="Holiday offers">عروض سياحية متنوعة</span></span>
+
+<span>◷ <span data-ar="متابعة عبر واتساب" data-en="WhatsApp support">متابعة عبر واتساب</span></span>
 
 </div>
 
 </section>
 
-<div class="stats">
+<!-- استمارة حجز الطيران الأصلية -->
 
-<div class="stat"><b>6 وجهات</b><span>من مطار البصرة</span></div>
+<section class="booking section" id="flights">
 
-<div class="stat"><b>الدينار العراقي</b><span>الأسعار لكل تذكرة</span></div>
+<div class="heading">
 
-<div class="stat"><b>تأكيد قبل الحجز</b><span>السعر والتوفر يتغيران</span></div>
+<label data-ar="خطوتك الأولى" data-en="YOUR FIRST STEP">خطوتك الأولى</label>
 
-</div>
+<h2 data-ar="إلى أين تأخذك الرحلة؟" data-en="Where will your journey take you?">إلى أين تأخذك الرحلة؟</h2>
 
-<section id="prices">
-
-<div class="head">
-
-<div><h2>أسعار التذاكر</h2><p>حدد نوع الرحلة والوجهة والفئة لعرض السعر.</p></div>
-
-<div class="updated">آخر تحديث للبيانات: 29 تشرين الأول 2026</div>
+<p data-ar="أرسل تفاصيل رحلتك وفريقنا يساعدك بمراجعة الخيارات والأسعار المتاحة." data-en="Send your trip details and our team will check available options and fares.">أرسل تفاصيل رحلتك وفريقنا يساعدك بمراجعة الخيارات والأسعار المتاحة.</p>
 
 </div>
 
-<div class="search">
+<form id="flightForm" class="form">
 
-<div class="field">
+<div>
 
-<label for="tripType">نوع الرحلة</label>
+<label for="from" data-ar="من — مدينة المغادرة" data-en="From — departure city">من — مدينة المغادرة</label>
 
-<select id="tripType">
-
-<option value="round">ذهاب وعودة</option>
-
-<option value="one">ذهاب فقط</option>
-
-</select>
+<input id="from" required placeholder="البصرة / Basra">
 
 </div>
 
-<div class="field">
+<div>
 
-<label for="destination">الوجهة</label>
+<label for="to" data-ar="إلى — الوجهة" data-en="To — destination">إلى — الوجهة</label>
 
-<select id="destination">
-
-<option value="all">كل الوجهات</option>
-
-<option value="baghdad">بغداد</option>
-
-<option value="erbil">أربيل</option>
-
-<option value="sulaymaniyah">السليمانية</option>
-
-<option value="istanbul">إسطنبول</option>
-
-<option value="beirut">بيروت</option>
-
-<option value="cairo">القاهرة</option>
-
-</select>
+<input id="to" required placeholder="إسطنبول / Istanbul">
 
 </div>
 
-<div class="field">
+<div>
 
-<label for="departDate">تاريخ الذهاب</label>
+<label for="depart" data-ar="تاريخ الذهاب" data-en="Departure date">تاريخ الذهاب</label>
 
-<input type="date" id="departDate">
-
-</div>
-
-<div class="field" id="returnWrap">
-
-<label for="returnDate">تاريخ العودة</label>
-
-<input type="date" id="returnDate">
+<input id="depart" type="date" required>
 
 </div>
 
-<div class="field">
+<div>
 
-<label for="passengers">عدد المسافرين</label>
+<label for="return" data-ar="تاريخ العودة (اختياري)" data-en="Return date (optional)">تاريخ العودة (اختياري)</label>
+
+<input id="return" type="date">
+
+</div>
+
+<div>
+
+<label for="passengers" data-ar="عدد المسافرين" data-en="Passengers">عدد المسافرين</label>
 
 <select id="passengers">
 
-<option>1</option><option>2</option><option>3</option>
-
-<option>4</option><option>5</option><option>6</option>
-
-<option>7</option><option>8</option><option>9</option>
+<option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
 
 </select>
 
 </div>
 
-<div class="field">
+<div>
 
-<label for="fareClass">فئة التذكرة</label>
+<label for="tripType" data-ar="نوع الرحلة" data-en="Trip type">نوع الرحلة</label>
 
-<select id="fareClass">
+<select id="tripType">
 
-<option value="all">كل الفئات</option>
+<option value="round" data-ar="ذهاب وعودة" data-en="Round trip">ذهاب وعودة</option>
+
+<option value="oneway" data-ar="ذهاب فقط" data-en="One way">ذهاب فقط</option>
+
+</select>
+
+</div>
+
+<button class="btn gold send" type="submit">
+
+<span data-ar="أرسل طلب الرحلة عبر واتساب ↗️" data-en="Send flight request via WhatsApp ↗️">أرسل طلب الرحلة عبر واتساب ↗️</span>
+
+</button>
+
+<small class="note" data-ar="هذا طلب استفسار وليس حجزاً مؤكداً. السعر والتوفر يؤكدهما موظف الشركة." data-en="This is an enquiry, not a confirmed booking. Fare and availability are confirmed by our team.">هذا طلب استفسار وليس حجزاً مؤكداً. السعر والتوفر يؤكدهما موظف الشركة.</small>
+
+</form>
+
+</section>
+
+<!-- قسم أسعار الخطوط الجوية العراقية الجديد -->
+
+<section class="iq-fares" id="iraqi-fares">
+
+<div class="fare-heading">
+
+<label data-ar="IRAQI AIRWAYS · من البصرة" data-en="IRAQI AIRWAYS · FROM BASRA">IRAQI AIRWAYS · من البصرة</label>
+
+<h2 data-ar="أسعار تذاكر الخطوط الجوية العراقية" data-en="Iraqi Airways Ticket Prices">أسعار تذاكر الخطوط الجوية العراقية</h2>
+
+<p data-ar="اختار وجهتك وفئة التذكرة حتى تشوف الأسعار المبدئية. تگدر ترسل تفاصيل رحلتك مباشرة إلى واتساب الشركة." data-en="Choose your destination and fare class to view starting prices. Send your trip details directly to our WhatsApp team.">اختار وجهتك وفئة التذكرة حتى تشوف الأسعار المبدئية. تگدر ترسل تفاصيل رحلتك مباشرة إلى واتساب الشركة.</p>
+
+</div>
+
+<div class="fare-filters">
+
+<div class="fare-field">
+
+<label for="iqTrip" data-ar="نوع الرحلة" data-en="Trip type">نوع الرحلة</label>
+
+<select id="iqTrip">
+
+<option value="round" data-ar="ذهاب وعودة" data-en="Round trip">ذهاب وعودة</option>
+
+<option value="one" data-ar="ذهاب فقط" data-en="One way">ذهاب فقط</option>
+
+</select>
+
+</div>
+
+<div class="fare-field">
+
+<label for="iqDestination" data-ar="الوجهة" data-en="Destination">الوجهة</label>
+
+<select id="iqDestination">
+
+<option value="all" data-ar="كل الوجهات" data-en="All destinations">كل الوجهات</option>
+
+<option value="baghdad" data-ar="بغداد" data-en="Baghdad">بغداد</option>
+
+<option value="erbil" data-ar="أربيل" data-en="Erbil">أربيل</option>
+
+<option value="sulaymaniyah" data-ar="السليمانية" data-en="Sulaymaniyah">السليمانية</option>
+
+<option value="istanbul" data-ar="إسطنبول" data-en="Istanbul">إسطنبول</option>
+
+<option value="beirut" data-ar="بيروت" data-en="Beirut">بيروت</option>
+
+<option value="cairo" data-ar="القاهرة" data-en="Cairo">القاهرة</option>
+
+</select>
+
+</div>
+
+<div class="fare-field">
+
+<label for="iqClass" data-ar="فئة التذكرة" data-en="Fare class">فئة التذكرة</label>
+
+<select id="iqClass">
+
+<option value="all" data-ar="كل الفئات المتاحة" data-en="All available classes">كل الفئات المتاحة</option>
 
 <option value="Silver">Economy Silver</option>
 
@@ -332,241 +362,393 @@ section{margin:30px 0}
 
 </div>
 
-<div class="field">
+<div class="fare-field">
 
-<label>&nbsp;</label>
+<label for="iqPassengers" data-ar="عدد المسافرين" data-en="Passengers">عدد المسافرين</label>
 
-<button class="btn green" id="applyFilters" type="button">عرض الأسعار</button>
+<select id="iqPassengers">
 
-</div>
+<option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
 
-<div class="field">
-
-<label>&nbsp;</label>
-
-<button class="btn gold" id="clearFilters" type="button">إعادة ضبط</button>
+</select>
 
 </div>
 
-</div>
+<div class="fare-field">
 
-<p class="hint">هذه أسعار تبدأ من حسب البيانات التي زودتنا بها الشركة، وليست أسعاراً حية متصلة بنظام الحجز. السعر النهائي والتوفر يحتاجان تأكيداً حسب تاريخ السفر.</p>
+<label for="iqDepart" data-ar="تاريخ الذهاب" data-en="Departure date">تاريخ الذهاب</label>
 
-<div class="grid" id="routeGrid">
-
-<article class="card" data-route="baghdad">
-
-<div class="cardtop">
-
-<div class="code">BSR → BGW</div>
-
-<h3>🇮🇶 البصرة ⇄ بغداد</h3>
-
-<p>رحلات داخلية • أسعار تبدأ من</p>
+<input id="iqDepart" type="date">
 
 </div>
 
-<div class="fares">
+<div class="fare-field" id="iqReturnWrap">
 
-<div class="fare" data-fare="Silver"><b>Economy Silver<small class="label">ذهاب وعودة</small></b><span class="price" data-round="165000" data-one="">165,000 د.ع</span></div>
+<label for="iqReturn" data-ar="تاريخ العودة" data-en="Return date">تاريخ العودة</label>
 
-<div class="fare" data-fare="Gold"><b>Economy Gold<small class="label">ذهاب وعودة</small></b><span class="price" data-round="204000" data-one="111000">204,000 د.ع</span></div>
-
-<div class="fare" data-fare="Platinum"><b>Economy Platinum<small class="label">ذهاب وعودة</small></b><span class="price" data-round="225000" data-one="124000">225,000 د.ع</span></div>
+<input id="iqReturn" type="date">
 
 </div>
 
-<div class="days"><strong>أيام التشغيل:</strong> يومياً حسب الجدول المتوفر، يرجى التأكيد.</div>
+<div class="fare-field fare-filter-buttons">
 
-<div class="cardaction"><button class="btn green book" data-city="بغداد">اطلب حجز بغداد</button></div>
+<button type="button" class="fare-btn fare-btn-gold" id="iqApply" data-ar="عرض الأسعار" data-en="Show prices">عرض الأسعار</button>
+
+<button type="button" class="fare-btn fare-btn-dark" id="iqReset" data-ar="إعادة ضبط" data-en="Reset">إعادة ضبط</button>
+
+</div>
+
+</div>
+
+<div class="fare-grid" id="iqFareGrid">
+
+<!-- بغداد -->
+
+<article class="fare-card" data-route="baghdad">
+
+<div class="fare-card-top">
+
+<small>BSR ⇄ BGW</small>
+
+<h3 data-ar="🇮🇶 البصرة ⇄ بغداد" data-en="🇮🇶 Basra ⇄ Baghdad">🇮🇶 البصرة ⇄ بغداد</h3>
+
+<p data-ar="رحلة داخلية" data-en="Domestic route">رحلة داخلية</p>
+
+</div>
+
+<div class="fare-card-body">
+
+<div class="fare-row" data-class="Silver"><strong>Economy Silver<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="165000" data-one="">165,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Gold"><strong>Economy Gold<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="204000" data-one="111000">204,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Platinum"><strong>Economy Platinum<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="225000" data-one="124000">225,000 د.ع</span></div>
+
+</div>
+
+<div class="fare-days" data-ar="السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر." data-en="Final fare and availability depend on the travel date.">السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر.</div>
+
+<div class="fare-card-foot"><button type="button" class="fare-btn fare-btn-dark iqBook" data-city-ar="بغداد" data-city-en="Baghdad" data-ar="استفسر عن بغداد ↗️" data-en="Ask about Baghdad ↗️">استفسر عن بغداد ↗️</button></div>
 
 </article>
 
-<article class="card" data-route="erbil">
+<!-- أربيل -->
 
-<div class="cardtop">
+<article class="fare-card" data-route="erbil">
 
-<div class="code">BSR → EBL</div>
+<div class="fare-card-top">
 
-<h3>🇮🇶 البصرة ⇄ أربيل</h3>
+<small>BSR ⇄ EBL</small>
 
-<p>رحلات داخلية • أسعار تبدأ من</p>
+<h3 data-ar="🇮🇶 البصرة ⇄ أربيل" data-en="🇮🇶 Basra ⇄ Erbil">🇮🇶 البصرة ⇄ أربيل</h3>
 
-</div>
-
-<div class="fares">
-
-<div class="fare" data-fare="Silver"><b>Economy Silver<small class="label">ذهاب وعودة</small></b><span class="price" data-round="267000" data-one="">267,000 د.ع</span></div>
-
-<div class="fare" data-fare="Gold"><b>Economy Gold<small class="label">ذهاب وعودة</small></b><span class="price" data-round="331000" data-one="184000">331,000 د.ع</span></div>
-
-<div class="fare" data-fare="Platinum"><b>Economy Platinum<small class="label">ذهاب وعودة</small></b><span class="price" data-round="377000" data-one="210000">377,000 د.ع</span></div>
+<p data-ar="رحلة داخلية" data-en="Domestic route">رحلة داخلية</p>
 
 </div>
 
-<div class="days"><strong>أيام التشغيل:</strong> حسب الجدول المتوفر، يرجى التأكيد.</div>
+<div class="fare-card-body">
 
-<div class="cardaction"><button class="btn green book" data-city="أربيل">اطلب حجز أربيل</button></div>
+<div class="fare-row" data-class="Silver"><strong>Economy Silver<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="267000" data-one="">267,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Gold"><strong>Economy Gold<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="331000" data-one="184000">331,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Platinum"><strong>Economy Platinum<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="377000" data-one="210000">377,000 د.ع</span></div>
+
+</div>
+
+<div class="fare-days" data-ar="السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر." data-en="Final fare and availability depend on the travel date.">السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر.</div>
+
+<div class="fare-card-foot"><button type="button" class="fare-btn fare-btn-dark iqBook" data-city-ar="أربيل" data-city-en="Erbil" data-ar="استفسر عن أربيل ↗️" data-en="Ask about Erbil ↗️">استفسر عن أربيل ↗️</button></div>
 
 </article>
 
-<article class="card" data-route="sulaymaniyah">
+<!-- السليمانية -->
 
-<div class="cardtop">
+<article class="fare-card" data-route="sulaymaniyah">
 
-<div class="code">BSR → ISU</div>
+<div class="fare-card-top">
 
-<h3>🇮🇶 البصرة ⇄ السليمانية</h3>
+<small>BSR ⇄ ISU</small>
 
-<p>رحلات داخلية • أسعار تبدأ من</p>
+<h3 data-ar="🇮🇶 البصرة ⇄ السليمانية" data-en="🇮🇶 Basra ⇄ Sulaymaniyah">🇮🇶 البصرة ⇄ السليمانية</h3>
 
-</div>
-
-<div class="fares">
-
-<div class="fare" data-fare="Silver"><b>Economy Silver<small class="label">ذهاب وعودة</small></b><span class="price" data-round="265000" data-one="">265,000 د.ع</span></div>
-
-<div class="fare" data-fare="Gold"><b>Economy Gold<small class="label">ذهاب وعودة</small></b><span class="price" data-round="329000" data-one="184000">329,000 د.ع</span></div>
-
-<div class="fare" data-fare="Platinum"><b>Economy Platinum<small class="label">ذهاب وعودة</small></b><span class="price" data-round="374000" data-one="210000">374,000 د.ع</span></div>
+<p data-ar="رحلة داخلية" data-en="Domestic route">رحلة داخلية</p>
 
 </div>
 
-<div class="days"><strong>حسب جدول المكتب:</strong> الذهاب الأربعاء والجمعة • العودة الخميس والسبت. يرجى التأكيد.</div>
+<div class="fare-card-body">
 
-<div class="cardaction"><button class="btn green book" data-city="السليمانية">اطلب حجز السليمانية</button></div>
+<div class="fare-row" data-class="Silver"><strong>Economy Silver<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="265000" data-one="">265,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Gold"><strong>Economy Gold<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="329000" data-one="184000">329,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Platinum"><strong>Economy Platinum<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="374000" data-one="210000">374,000 د.ع</span></div>
+
+</div>
+
+<div class="fare-days" data-ar="حسب جدول المكتب: الذهاب الأربعاء والجمعة، والعودة الخميس والسبت. أكّد الموعد قبل الحجز." data-en="Agency schedule: outbound Wednesday and Friday; return Thursday and Saturday. Confirm before booking.">حسب جدول المكتب: الذهاب الأربعاء والجمعة، والعودة الخميس والسبت. أكّد الموعد قبل الحجز.</div>
+
+<div class="fare-card-foot"><button type="button" class="fare-btn fare-btn-dark iqBook" data-city-ar="السليمانية" data-city-en="Sulaymaniyah" data-ar="استفسر عن السليمانية ↗️" data-en="Ask about Sulaymaniyah ↗️">استفسر عن السليمانية ↗️</button></div>
 
 </article>
 
-<article class="card" data-route="istanbul">
+<!-- إسطنبول -->
 
-<div class="cardtop">
+<article class="fare-card" data-route="istanbul">
 
-<div class="code">BSR → IST</div>
+<div class="fare-card-top">
 
-<h3>🇹🇷 البصرة ⇄ إسطنبول</h3>
+<small>BSR ⇄ IST</small>
 
-<p>رحلات دولية • أسعار تبدأ من</p>
+<h3 data-ar="🇹🇷 البصرة ⇄ إسطنبول" data-en="🇹🇷 Basra ⇄ Istanbul">🇹🇷 البصرة ⇄ إسطنبول</h3>
 
-</div>
-
-<div class="fares">
-
-<div class="fare" data-fare="Silver"><b>Economy Silver<small class="label">ذهاب وعودة</small></b><span class="price" data-round="646000" data-one="">646,000 د.ع</span></div>
-
-<div class="fare" data-fare="Gold"><b>Economy Gold<small class="label">ذهاب وعودة</small></b><span class="price" data-round="757000" data-one="414000">757,000 د.ع</span></div>
-
-<div class="fare" data-fare="Platinum"><b>Economy Platinum<small class="label">ذهاب وعودة</small></b><span class="price" data-round="895000" data-one="491000">895,000 د.ع</span></div>
+<p data-ar="رحلة دولية" data-en="International route">رحلة دولية</p>
 
 </div>
 
-<div class="days"><strong>أيام التشغيل:</strong> يتأكد توفر الرحلة حسب تاريخ السفر.</div>
+<div class="fare-card-body">
 
-<div class="cardaction"><button class="btn green book" data-city="إسطنبول">اطلب حجز إسطنبول</button></div>
+<div class="fare-row" data-class="Silver"><strong>Economy Silver<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="646000" data-one="">646,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Gold"><strong>Economy Gold<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="757000" data-one="414000">757,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Platinum"><strong>Economy Platinum<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="895000" data-one="491000">895,000 د.ع</span></div>
+
+</div>
+
+<div class="fare-days" data-ar="السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر." data-en="Final fare and availability depend on the travel date.">السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر.</div>
+
+<div class="fare-card-foot"><button type="button" class="fare-btn fare-btn-dark iqBook" data-city-ar="إسطنبول" data-city-en="Istanbul" data-ar="استفسر عن إسطنبول ↗️" data-en="Ask about Istanbul ↗️">استفسر عن إسطنبول ↗️</button></div>
 
 </article>
 
-<article class="card" data-route="beirut">
+<!-- بيروت -->
 
-<div class="cardtop">
+<article class="fare-card" data-route="beirut">
 
-<div class="code">BSR → BEY</div>
+<div class="fare-card-top">
 
-<h3>🇱🇧 البصرة ⇄ بيروت</h3>
+<small>BSR ⇄ BEY</small>
 
-<p>رحلات دولية • أسعار تبدأ من</p>
+<h3 data-ar="🇱🇧 البصرة ⇄ بيروت" data-en="🇱🇧 Basra ⇄ Beirut">🇱🇧 البصرة ⇄ بيروت</h3>
 
-</div>
-
-<div class="fares">
-
-<div class="fare" data-fare="Gold"><b>Economy Gold<small class="label">ذهاب وعودة</small></b><span class="price" data-round="621000" data-one="330000">621,000 د.ع</span></div>
-
-<div class="fare" data-fare="Platinum"><b>Economy Platinum<small class="label">ذهاب وعودة</small></b><span class="price" data-round="697000" data-one="373000">697,000 د.ع</span></div>
+<p data-ar="رحلة دولية" data-en="International route">رحلة دولية</p>
 
 </div>
 
-<div class="days"><strong>أيام التشغيل:</strong> يتأكد جدول الرحلة حسب التاريخ.</div>
+<div class="fare-card-body">
 
-<div class="cardaction"><button class="btn green book" data-city="بيروت">اطلب حجز بيروت</button></div>
+<div class="fare-row" data-class="Gold"><strong>Economy Gold<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="621000" data-one="330000">621,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Platinum"><strong>Economy Platinum<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="697000" data-one="373000">697,000 د.ع</span></div>
+
+</div>
+
+<div class="fare-days" data-ar="السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر." data-en="Final fare and availability depend on the travel date.">السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر.</div>
+
+<div class="fare-card-foot"><button type="button" class="fare-btn fare-btn-dark iqBook" data-city-ar="بيروت" data-city-en="Beirut" data-ar="استفسر عن بيروت ↗️" data-en="Ask about Beirut ↗️">استفسر عن بيروت ↗️</button></div>
 
 </article>
 
-<article class="card" data-route="cairo">
+<!-- القاهرة -->
 
-<div class="cardtop">
+<article class="fare-card" data-route="cairo">
 
-<div class="code">BSR → CAI</div>
+<div class="fare-card-top">
 
-<h3>🇪🇬 البصرة ⇄ القاهرة</h3>
+<small>BSR ⇄ CAI</small>
 
-<p>رحلات دولية • أسعار تبدأ من</p>
+<h3 data-ar="🇪🇬 البصرة ⇄ القاهرة" data-en="🇪🇬 Basra ⇄ Cairo">🇪🇬 البصرة ⇄ القاهرة</h3>
 
-</div>
-
-<div class="fares">
-
-<div class="fare" data-fare="Silver"><b>Economy Silver<small class="label">ذهاب وعودة</small></b><span class="price" data-round="671000" data-one="">671,000 د.ع</span></div>
-
-<div class="fare" data-fare="Gold"><b>Economy Gold<small class="label">ذهاب وعودة</small></b><span class="price" data-round="754000" data-one="408000">754,000 د.ع</span></div>
-
-<div class="fare" data-fare="Platinum"><b>Economy Platinum<small class="label">ذهاب وعودة</small></b><span class="price" data-round="844000" data-one="458000">844,000 د.ع</span></div>
+<p data-ar="رحلة دولية" data-en="International route">رحلة دولية</p>
 
 </div>
 
-<div class="days"><strong>أيام التشغيل:</strong> يتأكد جدول الرحلة حسب التاريخ.</div>
+<div class="fare-card-body">
 
-<div class="cardaction"><button class="btn green book" data-city="القاهرة">اطلب حجز القاهرة</button></div>
+<div class="fare-row" data-class="Silver"><strong>Economy Silver<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="671000" data-one="">671,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Gold"><strong>Economy Gold<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="754000" data-one="408000">754,000 د.ع</span></div>
+
+<div class="fare-row" data-class="Platinum"><strong>Economy Platinum<small class="fare-type">ذهاب وعودة</small></strong><span class="fare-price" data-round="844000" data-one="458000">844,000 د.ع</span></div>
+
+</div>
+
+<div class="fare-days" data-ar="السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر." data-en="Final fare and availability depend on the travel date.">السعر النهائي وتوفر الرحلة يتأكدان حسب تاريخ السفر.</div>
+
+<div class="fare-card-foot"><button type="button" class="fare-btn fare-btn-dark iqBook" data-city-ar="القاهرة" data-city-en="Cairo" data-ar="استفسر عن القاهرة ↗️" data-en="Ask about Cairo ↗️">استفسر عن القاهرة ↗️</button></div>
 
 </article>
 
 </div>
 
-<div id="emptyState" class="empty">ماكو سعر مدخل لهذي الفئة أو نوع الرحلة حالياً. تواصل ويانا حتى نتحقق من الخيارات.</div>
+<div class="fare-empty" id="iqEmpty" data-ar="ماكو سعر مسجل لهذي الفئة ونوع الرحلة. تواصل ويانا حتى نتحقق من الخيارات." data-en="No price is listed for this class and trip type. Contact us to check available options.">ماكو سعر مسجل لهذي الفئة ونوع الرحلة. تواصل ويانا حتى نتحقق من الخيارات.</div>
+
+<div class="fare-note">
+
+<strong data-ar="ملاحظة مهمة:" data-en="Important note:">ملاحظة مهمة:</strong>
+
+<span data-ar="الأسعار المعروضة مبدئية حسب البيانات المتوفرة لدى الشركة، وليست أسعاراً حية مرتبطة بنظام حجز الخطوط الجوية العراقية. السعر النهائي وتوفر المقاعد وشروط الأمتعة والتغيير والإلغاء يجب تأكيدها قبل الدفع. أسعار Silver للذهاب فقط غير متوفرة ضمن البيانات الحالية." data-en="Displayed prices are starting fares based on the agency's supplied data. They are not live fares connected to Iraqi Airways' booking system. Final price, seat availability, baggage and change/cancellation conditions must be confirmed before payment. One-way Silver prices are not currently available in the supplied data.">الأسعار المعروضة مبدئية حسب البيانات المتوفرة لدى الشركة، وليست أسعاراً حية مرتبطة بنظام حجز الخطوط الجوية العراقية. السعر النهائي وتوفر المقاعد وشروط الأمتعة والتغيير والإلغاء يجب تأكيدها قبل الدفع. أسعار Silver للذهاب فقط غير متوفرة ضمن البيانات الحالية.</span>
+
+</div>
 
 </section>
 
-<section>
+<!-- الوجهات والعروض الأصلية -->
 
-<div class="head">
+<section class="section destinations" id="offers">
 
-<div><h2>طريقة الحجز</h2><p>خطوات بسيطة حتى نأكد السعر قبل إصدار التذكرة.</p></div>
+<div class="split">
 
-</div>
+<div class="heading left">
 
-<div class="steps">
+<label data-ar="اختر وجهتك" data-en="CHOOSE YOUR DESTINATION">اختر وجهتك</label>
 
-<div class="step"><b>١. اختار الرحلة</b><span>حدد الوجهة ونوع الرحلة والتاريخ وعدد المسافرين.</span></div>
-
-<div class="step"><b>٢. راجع سعر البداية</b><span>السعر الظاهر مبدئي وقد يتغير حسب التاريخ والتوفر.</span></div>
-
-<div class="step"><b>٣. أرسل الطلب</b><span>تفتح رسالة واتساب بتفاصيل الرحلة حتى نأكد السعر النهائي.</span></div>
+<h2 data-ar="أماكن تبقى بالذاكرة" data-en="Places that stay with you">أماكن تبقى بالذاكرة</h2>
 
 </div>
 
-</section>
-
-<div class="notice">
-
-<b>تنويه:</b> الأسعار أعلاه حسب البيانات التي زودتنا بها أنوار السندباد، وليست أسعاراً حية مرتبطة مباشرة بنظام الخطوط الجوية العراقية. السعر النهائي وتوفر المقاعد والأمتعة وشروط التغيير والإلغاء تُؤكد قبل الدفع وإصدار التذكرة. فئة Silver للذهاب فقط غير مسعّرة في بعض الوجهات.
+<p data-ar="من المدن النابضة بالحياة إلى الطبيعة الهادئة، خلّينا نساعدك تختار الرحلة المناسبة." data-en="From vibrant cities to peaceful escapes, let us help you find your next trip.">من المدن النابضة بالحياة إلى الطبيعة الهادئة، خلّينا نساعدك تختار الرحلة المناسبة.</p>
 
 </div>
 
-<section class="contact">
+<div class="grid">
+
+<article class="place istanbul">
+
+<span>01 / CITY ESCAPE</span>
 
 <div>
 
-<h2>تحتاج مساعدة بالحجز؟</h2>
+<small data-ar="مدينة تجمع القارتين" data-en="A city between two continents">مدينة تجمع القارتين</small>
 
-<p>أنوار السندباد للسياحة والسفر • البصرة – العباسية – قرب جامع السيد حامد السويج</p>
+<h3 data-ar="إسطنبول" data-en="Istanbul">إسطنبول</h3>
+
+<a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A5%D8%B3%D8%B7%D9%86%D8%A8%D9%88%D9%84" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗️" data-en="Ask about offers ↗️">استفسر عن العروض ↗️</a>
 
 </div>
 
-<div class="contact-actions">
+</article>
 
-<a class="btn green" href="https://wa.me/9647717199399" target="_blank" rel="noopener">واتساب 07717199399</a>
+<article class="place azer">
 
-<a class="btn gold" href="https://wa.me/9647819902200" target="_blank" rel="noopener">واتساب 07819902200</a>
+<span>02 / NATURE</span>
+
+<div>
+
+<small data-ar="طبيعة وتجارب مختلفة" data-en="Nature and new experiences">طبيعة وتجارب مختلفة</small>
+
+<h3 data-ar="أذربيجان" data-en="Azerbaijan">أذربيجان</h3>
+
+<a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%A3%D8%B0%D8%B1%D8%A8%D9%8A%D8%AC%D8%A7%D9%86" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗️" data-en="Ask about offers ↗️">استفسر عن العروض ↗️</a>
+
+</div>
+
+</article>
+
+<article class="place thai">
+
+<span>03 / TROPICAL</span>
+
+<div>
+
+<small data-ar="استوائي ومليء بالحياة" data-en="Tropical and full of life">استوائي ومليء بالحياة</small>
+
+<h3 data-ar="تايلند" data-en="Thailand">تايلند</h3>
+
+<a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%AA%D8%A7%D9%8A%D9%84%D9%86%D8%AF" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗️" data-en="Ask about offers ↗️">استفسر عن العروض ↗️</a>
+
+</div>
+
+</article>
+
+<article class="place salalah">
+
+<span>04 / GREEN ESCAPE</span>
+
+<div>
+
+<small data-ar="خضرة وهدوء" data-en="Green landscapes and calm">خضرة وهدوء</small>
+
+<h3 data-ar="صلالة" data-en="Salalah">صلالة</h3>
+
+<a href="https://wa.me/9647717199399?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D9%88%D8%B6%20%D8%B5%D9%84%D8%A7%D9%84%D8%A9" target="_blank" rel="noopener" data-ar="استفسر عن العروض ↗️" data-en="Ask about offers ↗️">استفسر عن العروض ↗️</a>
+
+</div>
+
+</article>
+
+</div>
+
+<div class="offer-note">
+
+<b>✦</b>
+
+<div>
+
+<strong data-ar="عروضنا تتجدد حسب مواعيد السفر والتوفر" data-en="Our offers change with travel dates and availability">عروضنا تتجدد حسب مواعيد السفر والتوفر</strong>
+
+<p data-ar="تواصل ويانا حتى نرسل لك أحدث الباقات والأسعار المؤكدة." data-en="Contact us for the latest packages and confirmed prices.">تواصل ويانا حتى نرسل لك أحدث الباقات والأسعار المؤكدة.</p>
+
+</div>
+
+<a class="btn dark" href="https://wa.me/9647717199399" target="_blank" rel="noopener" data-ar="اطلب أحدث العروض ↗️" data-en="Get latest offers ↗️">اطلب أحدث العروض ↗️</a>
+
+</div>
+
+</section>
+
+<!-- قسم رفيق الرحلة الأصلي -->
+
+<section class="why section">
+
+<div>
+
+<label data-ar="رفيق رحلتك" data-en="YOUR TRAVEL PARTNER">رفيق رحلتك</label>
+
+<h2 data-ar="أنت اختار الوجهة،<br><em>وإحنا نهتم بالتفاصيل.</em>" data-en="You choose the destination.<br><em>We’ll help with the details.</em>">أنت اختار الوجهة،<br><em>وإحنا نهتم بالتفاصيل.</em></h2>
+
+<p data-ar="نساعدك بالاستفسار عن خيارات الطيران والعروض السياحية، ونوضح التفاصيل قبل تأكيد الحجز." data-en="We help you explore flight options and holiday offers, with details explained before you confirm.">نساعدك بالاستفسار عن خيارات الطيران والعروض السياحية، ونوضح التفاصيل قبل تأكيد الحجز.</p>
+
+<a class="btn gold" href="#contact" data-ar="تواصل ويانا" data-en="Talk to our team">تواصل ويانا</a>
+
+</div>
+
+<div class="compass">
+
+<div class="ring"></div>
+
+<b>✦</b>
+
+<strong>AS</strong>
+
+<small data-ar="رحلتك، بطريقتك" data-en="YOUR TRIP, YOUR WAY">رحلتك، بطريقتك</small>
+
+</div>
+
+</section>
+
+<!-- التواصل الأصلي -->
+
+<section class="contact" id="contact">
+
+<div>
+
+<label data-ar="نحن قريبون منك" data-en="WE’RE HERE FOR YOU">نحن قريبون منك</label>
+
+<h2 data-ar="خلّينا نخطط لرحلتك القادمة." data-en="Let’s plan your next journey.">خلّينا نخطط لرحلتك القادمة.</h2>
+
+<p data-ar="للحجز والاستفسار عن الرحلات والعروض، تواصل مباشرة ويانا." data-en="For bookings, flights and holiday offers, get in touch with our team.">للحجز والاستفسار عن الرحلات والعروض، تواصل مباشرة ويانا.</p>
+
+</div>
+
+<div class="contact-buttons">
+
+<a class="btn gold" href="https://wa.me/9647717199399" target="_blank" rel="noopener">WhatsApp · 0771 719 9399 ↗️</a>
+
+<a class="btn outline" href="https://wa.me/9647819902200" target="_blank" rel="noopener">WhatsApp · 0781 990 2200 ↗️</a>
+
+<a class="insta" href="https://www.instagram.com/Anwar_alsindbad/" target="_blank" rel="noopener">Instagram @Anwar_alsindbad ↗️</a>
 
 </div>
 
@@ -574,201 +756,189 @@ section{margin:30px 0}
 
 </main>
 
+<footer>
+
+<a class="brand" href="#home">
+
+<img class="brand-logo" src="logo-anwar-alsindbad.jpg" alt="شعار أنوار السندباد للسفر والسياحة">
+
+<div>
+
+<b data-ar="أنوار السندباد" data-en="ANWAR AL-SINDBAD">أنوار السندباد</b>
+
+<small data-ar="للسفر والسياحة" data-en="TRAVEL & TOURISM">للسفر والسياحة</small>
+
 </div>
 
-<footer class="footer">
+</a>
 
-<div class="wrap foot">
+<span data-ar="البصرة – العباسية – قرب جامع السيد حامد السويج" data-en="Basra – Al-Abbasiya – near Sayyid Hamed Al-Suwaij Mosque">البصرة – العباسية – قرب جامع السيد حامد السويج</span>
 
-<div><b>أنوار السندباد للسياحة والسفر</b><br><small>Basra, Iraq • أسعار مبدئية قابلة للتغيير بعد التأكيد</small></div>
-
-<div><a href="https://www.instagram.com/Anwar_alsindbad/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.iraqiairways.com.iq/" target="_blank" rel="noopener">الخطوط الجوية العراقية</a></div>
-
-</div>
+<small>©️ <span id="year"></span> Anwar Al-Sindbad Travel & Tourism</small>
 
 </footer>
 
-<a class="float" href="https://wa.me/9647717199399" target="_blank" rel="noopener">واتساب ✆</a>
+<script src="script.js"></script>
 
 <script>
 
-const tripType=document.getElementById('tripType'),
+/* وظائف قسم أسعار العراقية فقط */
 
-destination=document.getElementById('destination'),
+(function(){
 
-fareClass=document.getElementById('fareClass'),
+const root=document.querySelector('.iq-fares');
 
-departDate=document.getElementById('departDate'),
+if(!root)return;
 
-returnDate=document.getElementById('returnDate'),
+const trip=root.querySelector('#iqTrip');
 
-returnWrap=document.getElementById('returnWrap'),
+const destination=root.querySelector('#iqDestination');
 
-passengers=document.getElementById('passengers'),
+const fareClass=root.querySelector('#iqClass');
 
-cards=[...document.querySelectorAll('.card[data-route]')],
+const passengers=root.querySelector('#iqPassengers');
 
-emptyState=document.getElementById('emptyState');
+const depart=root.querySelector('#iqDepart');
 
-const fmt=n=>Number(n).toLocaleString('en-US');
+const ret=root.querySelector('#iqReturn');
 
-const localISO=d=>{
+const returnWrap=root.querySelector('#iqReturnWrap');
 
-const x=new Date(d.getTime()-d.getTimezoneOffset()*60000);
+const empty=root.querySelector('#iqEmpty');
 
-return x.toISOString().slice(0,10);
+const cards=[...root.querySelectorAll('.fare-card')];
 
-};
+function currentLang(){
 
-departDate.min=localISO(new Date());
+return document.documentElement.lang==='en'?'en':'ar';
 
-returnDate.min=localISO(new Date());
+}
 
-departDate.addEventListener('change',()=>{
+function money(value){
 
-returnDate.min=departDate.value;
+return Number(value).toLocaleString('en-US')+(currentLang()==='en'?' IQD':' د.ع');
 
-if(returnDate.value&&returnDate.value<departDate.value)
+}
 
-returnDate.value=departDate.value;
+function filterPrices(){
 
-});
+let visibleCards=0;
 
-tripType.addEventListener('change',()=>{
+const isOne=trip.value==='one';
 
-returnWrap.classList.toggle('hide',tripType.value==='one');
-
-applyFilters();
-
-});
-
-function applyFilters(){
-
-let shown=0;
+returnWrap.style.display=isOne?'none':'block';
 
 cards.forEach(card=>{
 
-const routeOk=destination.value==='all'||card.dataset.route===destination.value;
+const routeMatches=destination.value==='all'||card.dataset.route===destination.value;
 
-let rows=0;
+let visibleRows=0;
 
-card.querySelectorAll('.fare').forEach(row=>{
+card.querySelectorAll('.fare-row').forEach(row=>{
 
-const price=row.querySelector('.price');
+const price=row.querySelector('.fare-price');
 
-const value=tripType.value==='round'?price.dataset.round:price.dataset.one;
+const amount=isOne?price.dataset.one:price.dataset.round;
 
-const clsOk=fareClass.value==='all'||row.dataset.fare===fareClass.value;
+const classMatches=fareClass.value==='all'||row.dataset.class===fareClass.value;
 
-const ok=Boolean(value)&&clsOk;
+const visible=Boolean(amount)&&classMatches;
 
-row.classList.toggle('hide',!ok);
+row.hidden=!visible;
 
-if(value){
+price.textContent=amount?money(amount):(currentLang()==='en'?'Price unavailable':'السعر غير متوفر');
 
-price.textContent=fmt(value)+' د.ع';
+const label=row.querySelector('.fare-type');
 
-}else{
+if(label)label.textContent=isOne?(currentLang()==='en'?'One way':'ذهاب فقط'):(currentLang()==='en'?'Round trip':'ذهاب وعودة');
 
-price.textContent='غير متوفر';
-
-}
-
-const lab=row.querySelector('.label');
-
-if(lab)lab.textContent=tripType.value==='round'?'ذهاب وعودة':'ذهاب فقط';
-
-if(ok)rows++;
+if(visible)visibleRows++;
 
 });
 
-const visible=routeOk&&rows>0;
+const show=routeMatches&&visibleRows>0;
 
-card.classList.toggle('hide',!visible);
+card.hidden=!show;
 
-if(visible)shown++;
+if(show)visibleCards++;
 
 });
 
-emptyState.style.display=shown?'none':'block';
+empty.style.display=visibleCards?'none':'block';
 
 }
 
-document.getElementById('applyFilters').addEventListener('click',applyFilters);
+root.querySelector('#iqApply').addEventListener('click',function(){
 
-document.getElementById('clearFilters').addEventListener('click',()=>{
+if(depart.value&&ret.value&&ret.value<depart.value&&!trip.value.includes('one')){
 
-tripType.value='round';
+alert(currentLang()==='en'?'Return date must be after departure date.':'تاريخ العودة لازم يكون بعد تاريخ الذهاب.');
+
+return;
+
+}
+
+filterPrices();
+
+});
+
+root.querySelector('#iqReset').addEventListener('click',function(){
+
+trip.value='round';
 
 destination.value='all';
 
 fareClass.value='all';
 
-departDate.value='';
+passengers.value='2';
 
-returnDate.value='';
+depart.value='';
 
-passengers.value='1';
+ret.value='';
 
-returnWrap.classList.remove('hide');
-
-applyFilters();
+filterPrices();
 
 });
 
-function msg(city){
+depart.addEventListener('change',function(){
 
-return `السلام عليكم، أريد الاستفسار عن تذكرة الخطوط الجوية العراقية من البصرة إلى ${city}.
+ret.min=depart.value;
 
-نوع الرحلة: ${tripType.value==='round'?'ذهاب وعودة':'ذهاب فقط'}
+if(ret.value&&ret.value<depart.value)ret.value='';
 
-تاريخ الذهاب: ${departDate.value||'لم يحدد'}
+});
 
-تاريخ العودة: ${tripType.value==='round'?(returnDate.value||'لم يحدد'):'لا يوجد'}
+root.querySelectorAll('.iqBook').forEach(button=>{
 
-عدد المسافرين: ${passengers.value}
+button.addEventListener('click',function(){
 
-الفئة: ${fareClass.value==='all'?'كل الفئات':'Economy '+fareClass.value}
+const lang=currentLang();
 
-يرجى تأكيد السعر النهائي والتوفر.`;
+const city=lang==='en'?button.dataset.cityEn:button.dataset.cityAr;
 
-}
+const tripText=trip.value==='one'?(lang==='en'?'One way':'ذهاب فقط'):(lang==='en'?'Round trip':'ذهاب وعودة');
 
-document.querySelectorAll('.book').forEach(btn=>{
+const classText=fareClass.value==='all'?(lang==='en'?'Any available class':'كل الفئات المتاحة'):'Economy '+fareClass.value;
 
-btn.addEventListener('click',()=>{
+const dep=depart.value||(lang==='en'?'Not specified':'لم يحدد');
 
-if(!departDate.value){
+const retText=trip.value==='one'?(lang==='en'?'Not applicable':'لا يوجد'):(ret.value||(lang==='en'?'Not specified':'لم يحدد'));
 
-alert('اختار تاريخ الذهاب أولاً.');
+const message=lang==='en'
 
-departDate.focus();
+?`Hello Anwar Al-Sindbad, I would like to ask about Iraqi Airways flights from Basra to ${city}.\nTrip: ${tripText}\nDeparture: ${dep}\nReturn: ${retText}\nPassengers: ${passengers.value}\nFare class: ${classText}\nPlease confirm the final fare and availability.`
 
-return;
+:`السلام عليكم، أريد الاستفسار عن تذكرة الخطوط الجوية العراقية من البصرة إلى ${city}.\nنوع الرحلة: ${tripText}\nتاريخ الذهاب: ${dep}\nتاريخ العودة: ${retText}\nعدد المسافرين: ${passengers.value}\nفئة التذكرة: ${classText}\nيرجى تأكيد السعر النهائي والتوفر.`;
 
-}
-
-if(tripType.value==='round'&&!returnDate.value){
-
-alert('اختار تاريخ العودة أو غيّر نوع الرحلة إلى ذهاب فقط.');
-
-return;
-
-}
-
-window.open(
-
-'https://wa.me/9647717199399?text='+encodeURIComponent(msg(btn.dataset.city)),
-
-'_blank','noopener'
-
-);
+window.open('https://wa.me/9647717199399?text='+encodeURIComponent(message),'_blank','noopener');
 
 });
 
 });
 
-applyFilters();
+filterPrices();
+
+})();
 
 </script>
 
