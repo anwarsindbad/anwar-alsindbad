@@ -726,4 +726,154 @@ footer {
 
   }
 
+}```css
+/* ==========================================
+   ANWAR AL-SINDBAD — CINEMATIC LUXURY
+   Version 1.0
+   ========================================== */
+
+/* 1. حركة سينمائية هادئة لخلفية الواجهة */
+.hero-bg {
+    animation: anwarSkyMotion 24s ease-in-out infinite alternate;
+    transform-origin: center center;
+    will-change: transform;
 }
+
+@keyframes anwarSkyMotion {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.09);
+    }
+}
+
+/* 2. إضاءة داكنة فخمة فوق الخلفية */
+.hero-shade {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 12, 25, 0.30) 0%,
+            rgba(5, 12, 25, 0.58) 55%,
+            rgba(5, 12, 25, 0.82) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(5, 12, 25, 0.72) 0%,
+            transparent 65%
+        );
+}
+
+/* 3. ظهور أنيق للنص الرئيسي */
+.hero-copy {
+    position: relative;
+    z-index: 2;
+    animation: anwarTextReveal 1.2s ease-out both;
+}
+
+@keyframes anwarTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 4. العناوين بلمسة ذهبية */
+.hero-copy h1 {
+    color: #f4dfac;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.38);
+    line-height: 1.5;
+}
+
+/* 5. الأزرار الذهبية */
+.hero-copy .btn,
+.hero-copy a {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+.hero-copy .btn:hover,
+.hero-copy a:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+}
+
+/* 6. بطاقات الوجهات السياحية */
+.place {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(214, 183, 119, 0.30);
+    border-radius: 18px;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.place:hover {
+    transform: translateY(-7px);
+    border-color: #d6b777;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+}
+
+/* 7. لمسة ذهبية ناعمة عند المرور على الوجهات */
+.place::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 35%,
+        rgba(4, 10, 22, 0.18) 55%,
+        rgba(4, 10, 22, 0.78) 100%
+    );
+    opacity: 0.85;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.place:hover::after {
+    opacity: 1;
+}
+
+/* 8. المحافظة على ظهور محتوى البطاقات فوق التأثير */
+.place > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* 9. حركة أخف على الهواتف */
+@media (max-width: 768px) {
+    .hero-bg {
+        animation-duration: 32s;
+    }
+
+    .hero-copy h1 {
+        line-height: 1.65;
+    }
+
+    .place:hover {
+        transform: none;
+    }
+}
+
+/* 10. احترام إعدادات تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg,
+    .hero-copy {
+        animation: none !important;
+    }
+
+    .place,
+    .hero-copy .btn,
+    .hero-copy a {
+        transition: none !important;
+    }
+}
+```
